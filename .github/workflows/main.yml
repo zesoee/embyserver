@@ -31,4 +31,4 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/embyserver:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/embyserver:4.9.1.26b
+            ${{ secrets.DOCKERHUB_USERNAME }}/embyserver:${{ github.ref_name }}
