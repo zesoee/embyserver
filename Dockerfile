@@ -30,7 +30,7 @@ RUN \
 RUN \
 	git clone https://github.com/intel/gmmlib.git && \
 	cd gmmlib && \
-	git checkout intel-gmmlib-22.8.0 && \
+	git checkout intel-gmmlib-22.8.2 && \
 	mkdir build && \
 	cd build && \
 	cmake -DCMAKE_INSTALL_PREFIX=/workspace/build/usr -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_INSTALL_LIBDIR=/workspace/build/lib -DCMAKE_BUILD_TYPE=ReleaseInternal .. && \
@@ -51,6 +51,6 @@ RUN \
 
 RUN find /workspace/build -name "*.so" -exec strip --strip-unneeded {} \;
 
-FROM xinjiawei1/emby_unlockd:4.9.1.26b AS emby
+FROM xinjiawei1/emby_unlockd:4.9.1.80 AS emby
 
 COPY --from=builder /workspace/build/lib /lib
