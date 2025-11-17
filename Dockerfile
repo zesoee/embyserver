@@ -51,6 +51,6 @@ RUN \
 
 RUN find /workspace/build -name "*.so" -exec strip --strip-unneeded {} \;
 
-FROM xinjiawei1/emby_unlockd:4.9.1.80 AS emby
+FROM emby/embyserver:4.9.1.90 AS emby
 
 COPY --from=builder /workspace/build/lib /lib
