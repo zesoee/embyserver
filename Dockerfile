@@ -1,4 +1,4 @@
-FROM emby/embyserver:4.9.2.6
+FROM emby/embyserver:4.9.2.7
 
 COPY --chown=root:root ./system/ /system/
 
